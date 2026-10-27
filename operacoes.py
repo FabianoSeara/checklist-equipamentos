@@ -9,15 +9,15 @@ def gerar_hash(texto):
 def cadastrar_inspetor(nome, matricula):
     conexao = database.conectar()
     cursor = conexao.cursor()
-    # Para conferir os nomes dos inspetores, abra o terminal e veja a lista.    
+    # To check the names of the inspectors, open the terminal and view the list..    
     #python
     #import database
-    #conexao = database.conectar()
+    #conexion = database.conectar()
     #cursor = conectar.cursor()
     #cursor.execute("SELECT * FROM inspetores") ou cursor.execute("SELECT nome, matricula_hash FROM inspetores")
-    #resultado = cursor.fetchall()
+    #Result = cursor.fetchall()
     #[print(dict(linha)) for linha in resultado]
-    #Isso deve trazer os nomes cadastrados no banco de dados 
+    #This should retrieve the names registered in the database. 
 
     matricula_hash = gerar_hash(matricula)
 
