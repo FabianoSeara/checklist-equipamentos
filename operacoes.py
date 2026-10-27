@@ -44,10 +44,10 @@ def registrar_inspecao(tipo_maquina, numero_equipamento, inspetor_manutencao, re
         VALUES (?, ?, ?, ?, ?)
     """, (tipo_maquina, numero_equipamento, inspetor_manutencao, hoje(), resultado_final))
 
-    # Pega o id da inspeção 
+    # Get the inspection Id
     id_inspecao = cursor.lastrowid
 
-    # Inserido cada item do checklist
+    # Entered each item from the checklist
     for item in itens_checklist:
         cursor.execute("""
             INSERT INTO itens_inspecao
